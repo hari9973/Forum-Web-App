@@ -8,7 +8,7 @@
   "scripts": {
     "start": "cd backend && npm run start",
     "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\" ",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "heroku-postbuild": "cd frontend && npm install && npm run build && cd .. && cd backend && npm install"
   },
   "keywords": [
     "MERN-Stack"
