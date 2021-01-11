@@ -13,9 +13,10 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 // create static assets from react code for production only
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 if (process.env.NODE_ENV === "production") {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
   app.use(express.static("../frontend/build"));
 
   app.get("/", (req, res) => {
