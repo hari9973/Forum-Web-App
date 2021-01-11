@@ -1,0 +1,21 @@
+{
+  "name": "forum-mern-app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "description": "Fourm Web App Build using MERN stack",
+  "scripts": {
+    "start": "cd backend && npm run start",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\" ",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [
+    "MERN-Stack"
+  ],
+  "author": "Hari Prasad Pothuri",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
